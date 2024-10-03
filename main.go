@@ -29,7 +29,7 @@ func main() {
 	r := mux.NewRouter()
 
 	movies = append(movies, Movie{ID: "1", Isbn: "12323", Title: "Hello", Director: &Director{FirstName: "John", LastName: "Doe"}})
-	movies = append(movies, Movie{ID: "2", Isbn: "123423", Title: "Love", Director: &Director{FirstName: "Taylor", LastName: "Swift"}})
+	movies = append(movies, Movie{ID: "2", Isbn: "123423", Title: "Hello", Director: &Director{FirstName: "John", LastName: "Doe"}})
 
 	r.HandleFunc("/movies", getMovies).Methods("GET")
 	r.HandleFunc("/movies/{id}", getMovie).Methods("GET")
